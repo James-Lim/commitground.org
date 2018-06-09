@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Kicked off!"
+date:   2018-06-09 21:12:22 +0900
+categories: team story 
+---
+We had a kick off meeting last Wednessday(6/6). Jin, Chet(Junghoon) and James(Wanseob) got together through 'hangout' and reviewed the the first draft of commitground whitepaper in Korean version.
+
+A new journey has started! We're sure that commitground will be the future culture of software development.
