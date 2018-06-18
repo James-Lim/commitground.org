@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Foundation & Corporation"
+date:   2018-06-18 18:05:00 +0900
+author: Wanseob Lim
+categories: team story commitplay
+---
+
+Through some discussions after the first kick off meeting, team members agreed with making two entities. The first one is the Commitground Foundation, and the second one is Commitplay, Inc. We did not register the entities yet, but it will be done soon. We will let you know progresses through this story page continuously.
+> commitplay, the corporation name was Chet's idea.
+
+We thought that commitground platform should be for all world wide software developers and not belong to us. So the commitground foundation will make own decisions for commitground platform and the founder team will make an individual corporation which does a commercial activities on the commitground platform. But also the corporation will drive and support the commitground project technically. We are just considering the Ubuntu & Canonical example. 
+
+So, now we just started the seed fund raising for Commitplay corporation. We are looking forward to meeting SV tech VC firms. If you have any interest please help us reach them.
+
+And from now, we will use this story page only to share commitground foundation's news, not Commitplay's. You can check Commitplay corporation's story & idea or news at [commitplay.io/story](https://commitplay.io/story).
