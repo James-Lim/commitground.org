@@ -25,6 +25,7 @@ after_success:
   - chmod 400 ~/.ssh/github_rsa
   - echo "host github.com" >> ~/.ssh/config
   - echo " HostName github.com" >> ~/.ssh/config
+  - echo " BatchMode yes" >> ~/.ssh/config
   - echo " IdentityFile ~/.ssh/github_rsa" >> ~/.ssh/config
   - echo " User git" >> ~/.ssh/config
   - git branch -D gh-pages
