@@ -1,0 +1,24 @@
+language: ruby
+
+rvm:
+  - 2.4.1
+
+cache: bundler
+
+branches:
+  only:
+  - white # This designates the branch to serve
+
+before_install: true
+
+install:
+  - gem install jekyll html-proofer
+
+script:
+  - jekyll build && htmlproofer ./_site
+
+# before_cache:
+after_success:
+  - git branch -D
+  - git checkout -b gh-pages
+  - git push origin gh-pages --force

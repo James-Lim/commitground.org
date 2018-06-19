@@ -2,9 +2,10 @@
 Commitground webpage repository
 
 # Branch history
-Current
+**Current**
 - [white](/tree/white) : 2018-06-18
-History
+
+**History**
 - [white](/tree/white) : 2018-06-18
 
 # How to contribute
