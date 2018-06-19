@@ -1,4 +1,7 @@
 # commitground.org
+
+[![Join the chat at https://gitter.im/commitground/commitground.org](https://badges.gitter.im/commitground/commitground.org.svg)](https://gitter.im/commitground/commitground.org?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Commitground webpage repository
 
 # Branch history
