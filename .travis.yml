@@ -21,12 +21,12 @@ script:
 # before_cache:
 after_success:
   - ssh-keyscan github.com >> ~/.ssh/known_hosts
-  - echo -e $SSHKEY >> ~/.ssh/github_rsa
-  - chmod 400 ~/.ssh/github_rsa
+  - echo -e $SSHKEY >> ~/.ssh/github_commitground_rsa
+  - chmod 400 ~/.ssh/github_commitground_rsa
   - echo "host github.com" >> ~/.ssh/config
   - echo " HostName github.com" >> ~/.ssh/config
   - echo " BatchMode yes" >> ~/.ssh/config
-  - echo " IdentityFile ~/.ssh/github_rsa" >> ~/.ssh/config
+  - echo " IdentityFile ~/.ssh/github_commitground_rsa" >> ~/.ssh/config
   - echo " User git" >> ~/.ssh/config
   - git branch -D gh-pages
   - git checkout -b gh-pages
