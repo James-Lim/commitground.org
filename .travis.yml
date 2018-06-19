@@ -21,4 +21,4 @@ script:
 
 # before_cache:
 after_success:
-  - if [ "$TRAVIS_BRANCH" != "gh-pages" ]; then git checkout -b gh-pages && git push https://$USERNAME:$PASSPHRASE@github.com/commitground/commitground.org.git gh-pages --force
+  - if [ "$TRAVIS_BRANCH" != "gh-pages" ]; then git checkout -b gh-pages && git push https://$USERNAME:$PASSPHRASE@github.com/commitground/commitground.org.git gh-pages --force; fi
