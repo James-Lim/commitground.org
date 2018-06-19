@@ -8,6 +8,7 @@ cache: bundler
 branches:
   only:
   - white # This designates the branch to serve
+  - gh-pages
 
 before_install: true
 
@@ -20,6 +21,4 @@ script:
 
 # before_cache:
 after_success:
-  - git branch -D gh-pages
-  - git checkout -b gh-pages
-  - git push https://$USERNAME:$PASSPHRASE@github.com/commitground/commitground.org.git gh-pages --force
+  - if [ "$TRAVIS_BRANCH" != "gh-pages" ]; then git checkout -b gh-pages && git push https://$USERNAME:$PASSPHRASE@github.com/commitground/commitground.org.git gh-pages --force
