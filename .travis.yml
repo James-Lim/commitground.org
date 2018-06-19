@@ -19,6 +19,6 @@ script:
 
 # before_cache:
 after_success:
-  - git branch -D
+  - git branch -D gh-pages
   - git checkout -b gh-pages
   - git push origin gh-pages --force
