@@ -12,7 +12,8 @@ branches:
 before_install: true
 
 install:
-  - gem install jekyll html-proofer
+  - gem install bundler
+  - bundle install
 
 script:
   - jekyll build && htmlproofer ./_site
