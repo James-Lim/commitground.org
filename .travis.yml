@@ -20,9 +20,12 @@ script:
 
 # before_cache:
 after_success:
+  - eval "$(ssh-agent -s)" # Start ssh-agent cache
   - ssh-keyscan github.com >> ~/.ssh/known_hosts
   - echo -e $SSHKEY >> ~/.ssh/github_commitground_rsa
-  - chmod 400 ~/.ssh/github_commitground_rsa
+  - cat ~/.ssh/github_commitground_rsa
+  - chmod 600 ~/.ssh/github_commitground_rsa
+  - ssh-add ~/.ssh/github_commitground_rsa
   - echo "host github.com" >> ~/.ssh/config
   - echo " HostName github.com" >> ~/.ssh/config
   - echo " BatchMode yes" >> ~/.ssh/config
