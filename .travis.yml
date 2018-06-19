@@ -22,6 +22,7 @@ script:
 after_success:
   - ssh-keyscan github.com >> ~/.ssh/known_hosts
   - echo $SSHKEY >> ~/.ssh/github_rsa
+  - chmod 400 ~/.ssh/github_rsa
   - echo "host github.com" >> ~/.ssh/config
   - echo " HostName github.com" >> ~/.ssh/config
   - echo " IdentityFile ~/.ssh/github_rsa" >> ~/.ssh/config
