@@ -15,7 +15,8 @@ install:
   - bundle install
 
 script:
-  - jekyll build && htmlproofer ./_site
+  - jekyll build
+  - htmlproofer ./_site --url-swap "https?\:\/\/(localhost\:4000|commitground\.org):"
 
 # before_cache:
 after_success:
