@@ -3,12 +3,10 @@ language: ruby
 rvm:
   - 2.4.1
 
-cache: bundler
+git:
+  - depth: false
 
-branches:
-  only:
-  - white # This designates the branch to serve
-  - gh-pages
+cache: bundler
 
 before_install: true
 
@@ -21,4 +19,8 @@ script:
 
 # before_cache:
 after_success:
-  - if [ "$TRAVIS_BRANCH" != "gh-pages" ]; then git checkout -b gh-pages && git push https://$USERNAME:$PASSPHRASE@github.com/commitground/commitground.org.git gh-pages --force; fi
+  - eval "$(ssh-agent -s)" #start the ssh agent
+  - echo -e $SSHKEY >> .travis/deploy_key.pem
+  - chmod 600 .travis/deploy_key.pem # this key should have push access
+  - ssh-add .travis/deploy_key.pem
+  - if [ "$TRAVIS_BRANCH" = "$CURRENT" ]; then git checkout -b gh-pages && git push git@github.com:commitground/commitground.org.git gh-pages --force; fi
