@@ -21,7 +21,7 @@ script:
 # before_cache:
 after_success:
   - eval "$(ssh-agent -s)" #start the ssh agent
-  - echo -e $SSHKEY >> .travis/deploy_key.pem
-  - chmod 600 .travis/deploy_key.pem # this key should have push access
-  - ssh-add .travis/deploy_key.pem
+  - echo -e $SSHKEY > deploy_key.pem
+  - chmod 600 deploy_key.pem # this key should have push access
+  - ssh-add deploy_key.pem
   - if [ "$TRAVIS_BRANCH" = "$CURRENT" ]; then git checkout -b gh-pages && git push git@github.com:commitground/commitground.org.git gh-pages --force; fi
